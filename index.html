@@ -164,7 +164,7 @@
     <link itemprop="mainEntityOfPage" href="https://winter-f.github.io/2020/03/20/HEXO%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myhead.jpg">
       <meta itemprop="name" content="赵峰">
       <meta itemprop="description" content="欢迎来到我的博客，这里是我用来记录我的学习生活，以及人生的感悟">
     </span>
@@ -186,7 +186,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-20 14:17:59 / 修改时间：14:51:14" itemprop="dateCreated datePublished" datetime="2020-03-20T14:17:59+08:00">2020-03-20</time>
+              <time title="创建时间：2020-03-20 14:17:59 / 修改时间：15:07:07" itemprop="dateCreated datePublished" datetime="2020-03-20T14:17:59+08:00">2020-03-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">日常笔记</span></a>
+                </span>
             </span>
 
           
@@ -211,6 +220,16 @@
 <p>可以都尝试一下</p>
 <h3 id="4、侧栏设置"><a href="#4、侧栏设置" class="headerlink" title="4、侧栏设置"></a>4、侧栏设置</h3><p>打开 主题配置文件 找到<code>sidebar</code>字段</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line">  position: left        //靠左放置</span><br><span class="line">  <span class="comment">#position: right      //靠右放置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Display - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#display: post        //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  display: always       //在所有页面中都显示</span><br><span class="line">  <span class="comment">#display: hide        //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#display: remove      //完全移除</span></span><br><span class="line"></span><br><span class="line">  offset: 12            //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">  b2t: <span class="literal">false</span>            //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br></pre></td></tr></table></figure>
+<h3 id="5、头像设置"><a href="#5、头像设置" class="headerlink" title="5、头像设置"></a>5、头像设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar: &#x2F;images&#x2F;header.jpg</span><br></pre></td></tr></table></figure>
+<p>这是头像的路径，只需把你的头像命名为<code>header.jpg</code>（随便命名）放入<code>themes/next/source/images</code>中，将avatar的路径名改成你的头像名就OK啦！</p>
+<h3 id="6、添加分类与标签"><a href="#6、添加分类与标签" class="headerlink" title="6、添加分类与标签"></a>6、添加分类与标签</h3><p>首先先新建两个目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>然后写文章的时候</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章标题</span><br><span class="line">categories: 分类名</span><br><span class="line">tags: </span><br><span class="line">  - 标签1</span><br><span class="line">  - 标签2</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h3 id="7、关于页面"><a href="#7、关于页面" class="headerlink" title="7、关于页面"></a>7、关于页面</h3><p>首先再新建一个目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+<p>你会发现你的source文件夹下有了<code>about/index.md</code>，打开<code>index.md</code>文件即可编辑关于你的信息，可以随便编辑。</p>
+<p>然后打开 主题配置文件 找到menu，将about取消注释</p>
 
       
     </div>
@@ -233,7 +252,7 @@
     <link itemprop="mainEntityOfPage" href="https://winter-f.github.io/2020/03/19/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myhead.jpg">
       <meta itemprop="name" content="赵峰">
       <meta itemprop="description" content="欢迎来到我的博客，这里是我用来记录我的学习生活，以及人生的感悟">
     </span>
@@ -290,7 +309,7 @@
     <link itemprop="mainEntityOfPage" href="https://winter-f.github.io/2020/03/19/my-new-post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myhead.jpg">
       <meta itemprop="name" content="赵峰">
       <meta itemprop="description" content="欢迎来到我的博客，这里是我用来记录我的学习生活，以及人生的感悟">
     </span>
@@ -355,7 +374,7 @@
     <link itemprop="mainEntityOfPage" href="https://winter-f.github.io/2020/03/19/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/myhead.jpg">
       <meta itemprop="name" content="赵峰">
       <meta itemprop="description" content="欢迎来到我的博客，这里是我用来记录我的学习生活，以及人生的感悟">
     </span>
@@ -477,6 +496,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵峰"
+      src="/images/myhead.jpg">
   <p class="site-author-name" itemprop="name">赵峰</p>
   <div class="site-description" itemprop="description">欢迎来到我的博客，这里是我用来记录我的学习生活，以及人生的感悟</div>
 </div>
@@ -489,8 +510,12 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
