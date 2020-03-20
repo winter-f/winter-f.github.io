@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>HEXO主题配置方法</title>
+    <url>/2020/03/20/HEXO%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>这部分的内容可以参考<a href="https://hexo.io/zh-cn/docs/configuration.html。这里写一下是为了熟悉一下markdown的语法，作为第一篇博文。" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration.html。这里写一下是为了熟悉一下markdown的语法，作为第一篇博文。</a></p>
+<p>主题配置分为两部分，一个是hexo本身的配置，另一个是引入的新的主题的自身的配置，下面将从以下两个方面进行说明。</p>
+<h2 id="Hexo主题配置参数"><a href="#Hexo主题配置参数" class="headerlink" title="Hexo主题配置参数"></a>Hexo主题配置参数</h2><h2 id="NextT主题的配置"><a href="#NextT主题的配置" class="headerlink" title="NextT主题的配置"></a>NextT主题的配置</h2><h3 id="1、基本信息配置"><a href="#1、基本信息配置" class="headerlink" title="1、基本信息配置"></a>1、基本信息配置</h3><p>这个就是参考上面的网站即可</p>
+<h3 id="2、菜单设置"><a href="#2、菜单设置" class="headerlink" title="2、菜单设置"></a>2、菜单设置</h3><p>我们刚开始默认的菜单只有首页和归档两个，不能够满足我们的要求，所以需要添加菜单，打开 <strong>主题配置文件</strong> 找到 <code>Menu Settings</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
+<p>看看你需要哪个菜单就把哪个取消注释打开就行了；<br>关于后面的格式，以<code>archives: /archives/ || archive</code>为例：<br><code>||</code> 之前的<code>/archives/</code>表示标题“归档”，关于标题的格式可以去<code>themes/next/languages/zh-Hans.yml</code>中参考或修改<br><code>||</code>之后的<code>archive</code>表示图标，可以去<code>Font Awesome</code>中查看或修改，Next主题所有的图标都来自Font Awesome。</p>
+<h3 id="3、Next主题样式设置"><a href="#3、Next主题样式设置" class="headerlink" title="3、Next主题样式设置"></a>3、Next主题样式设置</h3><p>Next主题还有4种风格供我们选择，打开 主题配置文件 找到<code>Scheme Settings</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="comment"># scheme: Mist</span></span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<p>可以都尝试一下</p>
+<h3 id="4、侧栏设置"><a href="#4、侧栏设置" class="headerlink" title="4、侧栏设置"></a>4、侧栏设置</h3><p>打开 主题配置文件 找到<code>sidebar</code>字段</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line">  position: left        //靠左放置</span><br><span class="line">  <span class="comment">#position: right      //靠右放置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar Display - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#display: post        //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  display: always       //在所有页面中都显示</span><br><span class="line">  <span class="comment">#display: hide        //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#display: remove      //完全移除</span></span><br><span class="line"></span><br><span class="line">  offset: 12            //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">  b2t: <span class="literal">false</span>            //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br></pre></td></tr></table></figure>
+<h3 id="5、头像设置"><a href="#5、头像设置" class="headerlink" title="5、头像设置"></a>5、头像设置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar: &#x2F;images&#x2F;header.jpg</span><br></pre></td></tr></table></figure>
+<p>这是头像的路径，只需把你的头像命名为<code>header.jpg</code>（随便命名）放入<code>themes/next/source/images</code>中，将avatar的路径名改成你的头像名就OK啦！</p>
+<h3 id="6、添加分类与标签"><a href="#6、添加分类与标签" class="headerlink" title="6、添加分类与标签"></a>6、添加分类与标签</h3><p>首先先新建两个目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page categories</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>然后写文章的时候</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 分类测试文章标题</span><br><span class="line">categories: 分类名</span><br><span class="line">tags: </span><br><span class="line">  - 标签1</span><br><span class="line">  - 标签2</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h3 id="7、关于页面"><a href="#7、关于页面" class="headerlink" title="7、关于页面"></a>7、关于页面</h3><p>首先再新建一个目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+<p>你会发现你的source文件夹下有了<code>about/index.md</code>，打开<code>index.md</code>文件即可编辑关于你的信息，可以随便编辑。</p>
+<p>然后打开 主题配置文件 找到menu，将about取消注释</p>
+<h3 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h3><p>首先安装插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在Hexo配置文件里找到<code>Extensions</code>，并进行配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 搜索</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>最后在主题配置文件里找到<code>Local search</code>，将<code>enable</code>设置为<code>true</code></p>
+]]></content>
+      <categories>
+        <category>日常笔记</category>
+      </categories>
+      <tags>
+        <tag>建站记录</tag>
+        <tag>hexo配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2020/03/19/test/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>my new post</title>
+    <url>/2020/03/19/my-new-post/</url>
+    <content><![CDATA[<h2 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h2><p>测试一下常用的功能吧</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/19/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
